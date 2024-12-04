@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+  p{
+    font-size: 8em;
+  }
+  p,div {
+    display: block;
+    text-align: center;
+  }
+  .button{
+    padding:20px 30px;
+    margin: 20px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+  }
+  div{
+margin-top: 100px;
+  }
+</style>
+</head>
+<body>
+
+  <p id="paragraph">0</p>
+  <div>
+  <button id="increase" class="button" onclick="function1()">increase</button>
+  <button id="decrease" class="button" onclick="function2()">decrease</button>
+  <button id="reset" class="button" onclick="function3()">reset</button>
+  </div>
+  <script>
+    let count=document.getElementById("paragraph").textContent;
+    function function1(){
+      count++;
+      document.getElementById("paragraph").textContent=count;
+    }
+    function function2(){
+      count--;
+      document.getElementById("paragraph").textContent=count;
+    }
+    function function3(){
+      count=0;
+      document.getElementById("paragraph").textContent=count;
+    }
+  </script>
+</body>
+</html>
